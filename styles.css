@@ -1,176 +1,277 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(45deg, #2b936b, #ffffff); /* Background gradient */
-    color: #333;
-  }
-  
-  h1, h2, h3 {
-    color: #222;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(45deg, #2b936b, #ffffff); /* Background gradient */
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(45deg, #1d3192, #4caf7f);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+header .btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+  background-color: #e64a19;
+}
+
+/* Timer Section Styling */
+.timer {
+  background: linear-gradient(45deg, #1d3192, #4caf7f); /* Match header styling */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.timer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+/* Event Details Styling */
+.event-details {
+  padding: 40px;
+  margin-top: 20px;
+}
+
+/* Event Container Styling */
+.event-container {
+  background-size: cover;
+  background-position: center;
+  color: rgb(16, 16, 16);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px; /* Adjust height as needed */
+}
+
+.event-container .event-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.event-container .event-name {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-bottom: 20px; /* Add margin-bottom for 2 lines gap */
+}
+
+.event-container .event-venue {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* Background Images for Each Event */
+.event-container.project-expo {
+  background-image: url('images/project.jpg');
+}
+
+.event-container.ideathon {
+  background-image: url('images/idea.jpg');
+}
+
+.event-container.end-game {
+  background-image: url('images/end.jpg');
+}
+
+.event-container.artifex {
+  background-image: url('images/art.jpg');
+}
+
+.event-container.goat {
+  background-image: url('images/goat.jpg');
+}
+
+/* Coordinators Section */
+.coordinators {
+  background-color: #d2f3e6;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.coordinators h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.coordinators ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.coordinators ul li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2d2e2e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
   }
-  
-  /* Header Styling */
-  header {
-    background: linear-gradient(45deg, #1d3192, #4caf7f);
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
+
   header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  header .btn {
-    background-color: #ff5722;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  header .btn:hover {
-    background-color: #e64a19;
-  }
-  
-  /* Timer Section Styling */
-  .timer {
-    background: linear-gradient(45deg, #1d3192, #4caf7f); /* Match header styling */
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .timer h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  #countdown {
     font-size: 2rem;
-    font-weight: bold;
-    color: #ff5722;
   }
-  
-  /* Event Details Styling */
-  .event-details {
-    padding: 40px;
-    margin-top: 20px;
+
+  header h2 {
+    font-size: 1.5rem;
   }
-  
-  /* Event Container Styling */
-  .event-container {
-    background-size: cover;
-    background-position: center;
-    color: rgb(16, 16, 16);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px; /* Adjust height as needed */
-  }
-  
-  .event-container .event-time {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .event-container .event-name {
-    font-size: 1.4rem;
-    margin-top: 5px;
-    margin-bottom: 20px; /* Add margin-bottom for 2 lines gap */
-  }
-  
-  .event-container .event-venue {
-    font-size: 1.1rem;
-    margin-top: 5px;
-  }
-  
-  /* Background Images for Each Event */
-  .event-container.project-expo {
-    background-image: url('images/project.jpg');
-  }
-  
-  .event-container.ideathon {
-    background-image: url('images/idea.jpg');
-  }
-  
-  .event-container.end-game {
-    background-image: url('images/end.jpg');
-  }
-  
-  .event-container.artifex {
-    background-image: url('images/art.jpg');
-  }
-  
-  .event-container.goat {
-    background-image: url('images/goat.jpg');
-  }
-  
-  /* Coordinators Section */
-  .coordinators {
-    background-color: #d2f3e6;
-    padding: 40px;
-    margin-top: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .coordinators h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  
-  .coordinators ul {
-    list-style-type: none;
-    margin-top: 10px;
-  }
-  
-  .coordinators ul li {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  /* Footer Styling */
-  footer {
-    background-color: #2d2e2e;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  footer p {
-    margin: 10px 0;
+
+  header p {
     font-size: 1rem;
   }
-  
+
+  header .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .timer h3 {
+    font-size: 1.5rem;
+  }
+
+  #countdown {
+    font-size: 1.5rem;
+  }
+
+  .event-container {
+    height: auto; /* Adjust height based on content */
+    padding: 15px;
+  }
+
+  .event-container .event-name {
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* Adjust margin for mobile */
+  }
+
+  .event-container .event-venue {
+    font-size: 1rem;
+  }
+
+  .coordinators h3 {
+    font-size: 1.5rem;
+  }
+
+  .coordinators ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  header .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .timer h3 {
+    font-size: 1.2rem;
+  }
+
+  #countdown {
+    font-size: 1.2rem;
+  }
+
+  .event-container .event-name {
+    font-size: 1rem;
+    margin-bottom: 10px; /* Adjust margin for mobile */
+  }
+
+  .event-container .event-venue {
+    font-size: 0.9rem;
+  }
+
+  .coordinators h3 {
+    font-size: 1.2rem;
+  }
+
+  .coordinators ul li {
+    font-size: 0.9rem;
+  }
+}
